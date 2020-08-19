@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: shuklajpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: shuklajpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: shuklajpipelinesjavascriptdocker 
+          image: sanimages.azurecr.io/shuklajpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
