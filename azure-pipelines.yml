@@ -20,3 +20,8 @@ steps:
     repository: 'sanimages.azurecr.io'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Pipeline.Workspace)'
+    publishLocation: 'pipeline'
+    
