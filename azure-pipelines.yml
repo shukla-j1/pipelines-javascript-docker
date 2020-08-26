@@ -14,5 +14,12 @@ steps:
     repository: $(imageName)
     command: build
     Dockerfile: app/Dockerfile
+- task: Docker@2
+  inputs:
+        containerRegistry: 'sanimages'
+        repository: 'javascriptdocker'
+        command: 'buildAndPush'
+        Dockerfile: '**/Dockerfile'
+
 
     
