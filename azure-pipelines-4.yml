@@ -45,7 +45,5 @@ stages:
           
     - upload: manifests
       artifact: manifests
-
-- 
       
     
