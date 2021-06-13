@@ -51,7 +51,7 @@ stages:
     displayName: Deploy job
     pool:
       vmImage: $(vmImageName)
-    environment: 'azooinmyluggagepipelinesjavascriptdocker.aksnamespace'
+    environment: 'shukla-j1.pipelines-javascipt-docker.default'
     strategy:
       runOnce:
         deploy:
