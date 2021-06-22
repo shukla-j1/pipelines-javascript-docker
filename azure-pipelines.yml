@@ -1,4 +1,5 @@
 trigger:
+
 - master
 
 pool:
@@ -20,6 +21,13 @@ steps:
         repository: 'javascriptdocker'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
+- task: KubernetesManifest@0
+  inputs:
+    action: 'deploy'
+    kubernetesServiceConnection: 'sanConn'
+    namespace: 'defult'
+    manifests: '$(ImageName)'
+
 
 
     
